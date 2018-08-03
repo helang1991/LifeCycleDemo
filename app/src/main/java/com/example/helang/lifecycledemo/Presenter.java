@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 /**
- * 其实也要基于MVP来做的，这样解耦才能更加好
+ * 其实也要基于MVP来做的，这样解耦才能更加好,同时也可以更好地处理MVP中的生命周期的问题
  * Presenter承担更多业务上的操作，但是，也不易把过多的业务转到Presenter中，不然会造成Presenter变成第二个"Activity"
  * Created by helang on 2018/6/19.
  */
@@ -32,6 +32,7 @@ public class Presenter implements IPresenter {
      */
     private void bindService(){
         //连接Aidl服务，代码我就不写了
+        Log.d(TAG,"bindService");
     }
 
     /**
@@ -39,6 +40,7 @@ public class Presenter implements IPresenter {
      */
     private void unbindService(){
         //断开Aidl服务
+        Log.d(TAG,"unbindService");
     }
 
 
